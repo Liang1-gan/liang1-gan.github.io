@@ -475,8 +475,8 @@ proxy-groups:
   - CN-144.79.11.154-150
   - TW-111.248.85.245-45
   - SG-103.36.91.32-4533
-  url: http://www.gstatic.com/generate_204
-  interval: 120
+  url: http://cp.cloudflare.com/generate_204
+  interval: 60
   tolerance: 100
 - name: sp-local
   type: select
@@ -492,3 +492,15 @@ rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,10.0.0.0/8,DIRECT
 - MATCH,PROXY
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  - https://1.0.0.1/dns-query
