@@ -1,249 +1,443 @@
+# Auto-generated mihomo config - 2026-05-30 18:20:26
+# Proxies: 100
+
 mixed-port: 7897
-allow-lan: true
+allow-lan: false
+bind-address: '*'
 mode: rule
 log-level: warning
+ipv6: false
 external-controller: 127.0.0.1:9097
-secret: set-your-secret
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  fallback:
+    - 8.8.8.8
+    - 1.1.1.1
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+
 proxies:
-- name: CN-144.79.11.154-1
-  type: vmess
-  server: yd3.ainivp.com
-  port: 33407
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /ray
-    headers:
-      Host: yd3.ainivp.com
-- name: TW-211.76.176.98-0
-  type: trojan
-  server: jpbgp.netvigor.cc
-  port: 19128
-  password: gcuCpQfaiVeDBdWG
-  udp: true
-  sni: yazhou10.dynu.net
-- name: CN-144.79.11.154-1-1
-  type: vmess
-  server: cu2.ainivp.com
-  port: 33203
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /ray
-    headers:
-      Host: cu2.ainivp.com
-- name: RELAY-190.93.244.1
-  type: vmess
-  server: 190.93.244.195
-  port: 443
-  uuid: b3a21def-5fcc-47a8-a6a0-a34e29d5288a
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /wss51068
-    headers:
-      Host: ''
-- name: CN-122.51.67.96-00
-  type: vmess
-  server: cu3.ainivp.com
-  port: 33103
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cu3.ainivp.com
-- name: CN-122.51.67.96-00-1
-  type: vmess
-  server: cu3.ainivp.com
-  port: 33108
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cu3.ainivp.com
-- name: CN-144.79.11.154-0
-  type: vmess
-  server: yd3.ainivp.com
-  port: 33402
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: yd3.ainivp.com
-- name: RELAY-172.64.93.13
-  type: vmess
-  server: 172.64.93.136
-  port: 443
-  uuid: 80e098a1-f768-3dfb-b97f-6c3a5d34bcd8
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.wweblog.pw
-- name: US-172.236.100.134
-  type: vmess
-  server: awsxjp.moonfree.top
-  port: 443
-  uuid: 6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: awsxjp.moonfree.top
-- name: US-172.239.34.52-0
-  type: vmess
-  server: oz.moonfree.top
-  port: 443
-  uuid: 6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: oz.moonfree.top
-- name: US-76.223.54.146-0
-  type: vmess
-  server: 51us.fans8.xyz
-  port: 80
-  uuid: 7f4ff2e1-c08f-35bd-afe7-4a6a386907aa
-  alterId: 2
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: 51us.fans8.xyz
-- name: RELAY-172.66.47.44
-  type: vmess
-  server: 172.66.47.44
-  port: 2053
-  uuid: 80e098a1-f768-3dfb-b97f-6c3a5d34bcd8
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: web1.wweblog.pw
-- name: US-172.239.193.198
-  type: vmess
-  server: v6d1.moonfree.top
-  port: 443
-  uuid: 6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: v6d1.moonfree.top
-- name: RELAY-104.16.162.1
-  type: vmess
-  server: 104.16.162.16
-  port: 2053
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: foxus.fovi.tk
-- name: RELAY-172.64.147.7
-  type: vmess
-  server: 172.64.147.71
-  port: 443
-  uuid: 80e098a1-f768-3dfb-b97f-6c3a5d34bcd8
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.wweblog.pw
-- name: sp-local-socks
-  type: socks5
-  server: 127.0.0.1
-  port: 12300
-  udp: true
+  - {"name": "🏁RELAY-172.66.44.211-0697", "type": "trojan", "server": "v1.dabache.top", "port": 443, "password": "humanity", "udp": true, "sni": "www.multiplydose.com", "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "🇹🇼TW-211.76.176.98-0425", "type": "trojan", "server": "211.76.176.98", "port": 19128, "password": "gcuCpQfaiVeDBdWG", "udp": true, "sni": "yazhou10.dynu.net"}
+  - {"name": "🏁RELAY-172.64.147.24-0671", "type": "trojan", "server": "172.64.147.24", "port": 443, "password": "humanity", "udp": true, "sni": "www.gossipglove.com", "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "🇮🇳IN-152.67.160.174-0454", "type": "trojan", "server": "152.67.160.174", "port": 443, "password": "54080134-2cba-4535-8599-95650bd9aa54", "udp": true}
+  - {"name": "美国+CloudFlare节点", "type": "trojan", "server": "104.20.6.134", "port": 443, "password": "humanity", "udp": true, "sni": "www.calmloud.com", "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "🇰🇷KR-121.180.171.43-0689", "type": "trojan", "server": "121.180.171.43", "port": 11310, "password": "GKHWMe2R4qwNcNxu6l3KMkdd", "udp": true, "sni": "vpn1.rnmcnm.com", "network": "ws", "ws-opts": {"path": "/trj-ws"}}
+  - {"name": "🇰🇷KR-121.178.83.161-0688", "type": "trojan", "server": "121.178.83.161", "port": 26214, "password": "GKHWMe2R4qwNcNxu6l3KMkdd", "udp": true, "sni": "vpn1.rnmcnm.com", "network": "ws", "ws-opts": {"path": "/trj-ws"}}
+  - {"name": "🇰🇷KR-59.21.203.65-0687", "type": "trojan", "server": "59.21.203.65", "port": 10443, "password": "GKHWMe2R4qwNcNxu6l3KMkdd", "udp": true, "sni": "vpn1.rnmcnm.com", "network": "ws", "ws-opts": {"path": "/trj-ws"}}
+  - {"name": "🏁RELAY-104.21.40.34-0691", "type": "trojan", "server": "104.21.40.34", "port": 443, "password": "humanity", "udp": true, "sni": "www.gossipglove.com", "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "🏁RELAY-8.6.112.0-0672", "type": "trojan", "server": "8.6.112.0", "port": 443, "password": "humanity", "udp": true, "sni": "www.calmloud.com", "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "🏁RELAY-104.18.0.55-0696", "type": "trojan", "server": "www.gossipglove.com", "port": 443, "password": "humanity", "udp": true, "network": "ws", "ws-opts": {"path": "/assignment"}}
+  - {"name": "捷克+V2CROSS.COM", "type": "vless", "server": "95.85.228.146", "port": 8443, "uuid": "a67e3045-626c-42c9-8cc0-a5afa6b18b05", "udp": true, "tls": true, "flow": "xtls-rprx-vision", "client-fingerprint": "chrome", "reality-opts": {"public-key": "A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM", "short-id": "92d0c4089b6c1da3"}, "servername": "io.ozone.ru"}
+  - {"name": "俄罗斯+V2CROSS.COM", "type": "vless", "server": "85.234.114.53", "port": 443, "uuid": "afcac633-0e1a-46c3-bef2-cc01cc0097c8", "udp": true, "tls": true, "flow": "xtls-rprx-vision"}
+  - {"name": "美国+CloudFlare节点_2", "type": "vless", "server": "up2-df6.pages.dev", "port": 443, "uuid": "ce69190e-935a-4394-9e5e-2ab2872ba242", "udp": true, "tls": true, "network": "ws", "ws-opts": {"path": "/uTZSXPBI2IfoxF86", "headers": {"Host": "up2-df6.pages.dev"}}}
+  - {"name": "🇺🇸US-216.24.57.250-0711", "type": "trojan", "server": "216.24.57.250", "port": 443, "password": "5027e2a4-c4d2-463a-9508-83a2c7d1ad83", "udp": true, "sni": "afrcloud1.mmv.kr", "network": "ws", "ws-opts": {"path": "/5.223.47.32=443"}}
+  - {"name": "俄罗斯+V2CROSS.COM_2", "type": "vless", "server": "r1.mizulina.top", "port": 22231, "uuid": "afcac633-0e1a-46c3-bef2-cc01cc0097c8", "udp": true, "tls": true, "flow": "xtls-rprx-vision"}
+  - {"name": "乌克兰+V2CROSS.COM", "type": "vless", "server": "91.225.217.28", "port": 443, "uuid": "296bbba2-b100-4d91-b8df-3fe03cc863c4", "udp": true, "tls": true, "client-fingerprint": "chrome", "reality-opts": {"public-key": "CnFVrSvJ1Mhl_6QqKCCvXtEdlaJjN4MXWBkSswJ_gX0", "short-id": "106c"}, "servername": "yahoo.com"}
+  - {"name": "🇨🇦CA-148.113.141.99-0496", "type": "trojan", "server": "148.113.141.99", "port": 443, "password": "HdsUZmsHQW", "udp": true}
+  - {"name": "英国+V2CROSS.COM", "type": "vless", "server": "swe-8t.freeonline.pro", "port": 443, "uuid": "980231fb-4372-5c81-b696-20aa34d33af0", "udp": true, "tls": true, "flow": "xtls-rprx-vision", "client-fingerprint": "chrome", "reality-opts": {"public-key": "978-Yxgtd3AWTVfiXEQqCstdwrT1qgsgleGPIRGQDl8", "short-id": "bdac121c7debdaba"}, "servername": "www.microsoft.com"}
+  - {"name": "🇦🇺AU-103.224.212.216-0907", "type": "trojan", "server": "uk1.trojanvh.xyz", "port": 80, "password": "b640d791-ff83-4300-b509-c2a02f97f167", "udp": true}
+  - {"name": "🇦🇺AU-103.224.212.216-0823", "type": "trojan", "server": "us2.trojanvh.xyz", "port": 80, "password": "255c924c-1314-4084-9a9e-1d1a82a5cf49", "udp": true}
+  - {"name": "🏁RELAY-172.65.211.209-1011", "type": "trojan", "server": "v02.gutingting.com", "port": 30006, "password": "261ccd4c-425d-43a2-bf2a-59c3d1f02e94", "udp": true, "sni": "v2hgc02.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1022", "type": "trojan", "server": "v02.gutingting.com", "port": 30054, "password": "261ccd4c-425d-43a2-bf2a-59c3d1f02e94", "udp": true, "sni": "v1jp01.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1009", "type": "trojan", "server": "v02.gutingting.com", "port": 30038, "password": "fc2e30d6-474a-42a4-8de2-32720698c97f", "udp": true, "sni": "v2hgc02.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1047", "type": "trojan", "server": "v02.gutingting.com", "port": 20223, "password": "b504c643-d081-4c90-8f50-9b0bf0b0902d", "udp": true, "sni": "v2sg01.fuqiangren.com"}
+  - {"name": "🇫🇷FR-51.38.99.96-1052", "type": "trojan", "server": "51.38.99.96", "port": 443, "password": "b8808043-6566-4923-9195-e66bfb553d57", "udp": true, "sni": "ba24.ir"}
+  - {"name": "🏁RELAY-172.65.211.209-1057", "type": "trojan", "server": "v02.gutingting.com", "port": 30049, "password": "dc773e17-d94e-4f6e-a3cd-26c972a08b89", "udp": true, "sni": "v2sg02.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1096", "type": "trojan", "server": "v02.gutingting.com", "port": 30055, "password": "1957909a-4f2a-4d9c-99ad-119d45f052c1", "udp": true, "sni": "v1jp02.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1059", "type": "trojan", "server": "v02.gutingting.com", "port": 30052, "password": "c1596d35-5f68-4cef-bf5f-ac0d2ab88b2f", "udp": true, "sni": "v2th01.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1060", "type": "trojan", "server": "v02.gutingting.com", "port": 30053, "password": "c1596d35-5f68-4cef-bf5f-ac0d2ab88b2f", "udp": true, "sni": "v2phl01.fuqiangren.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1108", "type": "trojan", "server": "v02.gutingting.com", "port": 30051, "password": "b17fe152-2615-4fe1-b80e-3c61b557481d", "udp": true, "sni": "v2vn01.fuqiangren.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1245", "type": "trojan", "server": "kaizen-tw-1.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1248", "type": "trojan", "server": "kaizen-tw-3.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🏁RELAY-172.65.211.209-1117", "type": "trojan", "server": "v02.gutingting.com", "port": 30057, "password": "a0087535-9c6f-42cd-9220-a7bb8eeae6cc", "udp": true, "sni": "v1kr02.fuqiangren.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1255", "type": "trojan", "server": "kaizen-us-6.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🏁RELAY-104.21.88.44-1256", "type": "trojan", "server": "zi.you.usdtvfk.top", "port": 443, "password": "4d048fc6-d944-41dd-b327-10856adcc82d", "udp": true, "sni": "zi.you.usdtvfk.top"}
+  - {"name": "🇺🇸US-76.223.54.146-1274", "type": "trojan", "server": "kaizen-tw-2.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1273", "type": "trojan", "server": "kaizen-tw-4.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1348", "type": "trojan", "server": "kaizen-hk-8.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "paydiu.com"}
+  - {"name": "🇺🇸US-76.223.54.146-1417", "type": "trojan", "server": "kaizen-ru-2.mielink-dns2.com", "port": 443, "password": "265f092f-418b-30c9-a479-4800fd44dd19mielink", "udp": true, "sni": "$paydiu.com"}
+  - {"name": "🇭🇰HK-103.177.136.41-1510", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 47909, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "is.01.naiun.bilibili.com"}
+  - {"name": "🇭🇰HK-103.177.136.41-1509", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 41943, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "az.01.naiun.bilibili.com"}
+  - {"name": "🇺🇸US-155.117.198.83-1511", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 48697, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "gh.01.naiun.bilibili.com"}
+  - {"name": "🇭🇰HK-103.177.136.41-1512", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 46424, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "de.01.naiun.bilibili.com"}
+  - {"name": "🇺🇸US-155.117.198.86-1513", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 45553, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "ch.01.naiun.bilibili.com"}
+  - {"name": "🇭🇰HK-103.177.136.41-1514", "type": "trojan", "server": "90081bb25c.node.tro.cac.cab", "port": 45619, "password": "4f4d1167-ef14-4304-9bce-0740472503ef", "udp": true, "sni": "fr.01.naiun.bilibili.com"}
+  - {"name": "🇲🇾MY-85.211.246.136-1515", "type": "trojan", "server": "a.twodnwnpoe.xyz", "port": 53217, "password": "f58cd113-a3b1-319d-a993-331481731e82", "udp": true, "sni": "1.lossyesterday.xyz"}
+  - {"name": "🏁RELAY-104.18.32.47-1530", "type": "trojan", "server": "104.18.32.47", "port": 2053, "password": "Mitivpn", "udp": true, "sni": "dash.hitgram.ir"}
+  - {"name": "🏁RELAY-104.26.6.205-1531", "type": "trojan", "server": "www.hitgram.ir", "port": 443, "password": "Mitivpn", "udp": true, "sni": "www.hitgram.ir"}
+  - {"name": "🇰🇷KR-218.152.227.25-1536", "type": "trojan", "server": "218.152.227.25", "port": 12000, "password": "433e785b-2077-47f7-a43d-985f63dd18d1", "udp": true, "sni": "vpn.rnmcnm.com"}
+  - {"name": "🇺🇸US-216.24.57.251-1532", "type": "trojan", "server": "216.24.57.251", "port": 443, "password": "Mitivpn", "udp": true, "sni": "cdn.hitgram.ir"}
+  - {"name": "🏁RELAY-104.18.20.213-1540", "type": "trojan", "server": "104.18.20.213", "port": 443, "password": "mitivpn", "udp": true, "sni": "www.app-cloud.ir"}
+  - {"name": "🏁RELAY-14.102.228.76-1541", "type": "trojan", "server": "14.102.228.76", "port": 443, "password": "mitivpn", "udp": true, "sni": "www.app-cloud.ir"}
+  - {"name": "🇬🇧GB-43.245.227.108-1545", "type": "trojan", "server": "43.245.227.108", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-194.164.235.62-1544", "type": "trojan", "server": "194.164.235.62", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-87.251.16.237-1549", "type": "trojan", "server": "87.251.16.237", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram @WangCai2"}}
+  - {"name": "🇵🇱PL-31.133.0.55-1548", "type": "trojan", "server": "31.133.0.55", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-141.105.143.132-1550", "type": "trojan", "server": "141.105.143.132", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇵🇱PL-31.133.0.159-1551", "type": "trojan", "server": "31.133.0.159", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇵🇱PL-45.144.51.133-1552", "type": "trojan", "server": "45.144.51.133", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇦🇹AT-46.102.156.144-1553", "type": "trojan", "server": "46.102.156.144", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-77.110.106.91-1554", "type": "trojan", "server": "77.110.106.91", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-92.119.127.156-1555", "type": "trojan", "server": "92.119.127.156", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-93.115.19.15-1556", "type": "trojan", "server": "93.115.19.15", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.56.146.122-1558", "type": "trojan", "server": "31.56.146.122", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.58.76.50-1557", "type": "trojan", "server": "31.58.76.50", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-95.182.98.140-1560", "type": "trojan", "server": "95.182.98.140", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-94.183.186.206-1561", "type": "trojan", "server": "94.183.186.206", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇦🇹AT-212.113.106.125-1562", "type": "trojan", "server": "212.113.106.125", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-138.124.50.47-1566", "type": "trojan", "server": "138.124.50.47", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-77.110.106.55-1569", "type": "trojan", "server": "77.110.106.55", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.56.228.7-1559", "type": "trojan", "server": "31.56.228.7", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-46.226.167.115-1568", "type": "trojan", "server": "46.226.167.115", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇮🇷IR-62.60.216.82-1577", "type": "trojan", "server": "62.60.216.82", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-104.194.156.228-1579", "type": "trojan", "server": "104.194.156.228", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇳🇱NL-45.159.189.26-1583", "type": "trojan", "server": "45.159.189.26", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇬🇷GR-91.186.217.16-1574", "type": "trojan", "server": "91.186.217.16", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇳🇱NL-147.45.69.68-1580", "type": "trojan", "server": "147.45.69.68", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇳🇱NL-31.59.170.59-1563", "type": "trojan", "server": "31.59.170.59", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-31.59.41.182-1564", "type": "trojan", "server": "31.59.41.182", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-46.8.236.176-1565", "type": "trojan", "server": "46.8.236.176", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-77.239.98.191-1571", "type": "trojan", "server": "77.239.98.191", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-77.239.98.141-1570", "type": "trojan", "server": "77.239.98.141", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇳🇱NL-212.34.152.202-1584", "type": "trojan", "server": "212.34.152.202", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram @WangCai2"}}
+  - {"name": "🇳🇱NL-89.110.112.8-1586", "type": "trojan", "server": "89.110.112.8", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-62.60.157.104-1585", "type": "trojan", "server": "62.60.157.104", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-94.183.190.229-1588", "type": "trojan", "server": "94.183.190.229", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-188.215.31.110-1587", "type": "trojan", "server": "188.215.31.110", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-94.183.191.228-1595", "type": "trojan", "server": "94.183.191.228", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-46.8.237.174-1592", "type": "trojan", "server": "46.8.237.174", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-94.183.190.229-1594", "type": "trojan", "server": "94.183.190.229", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-46.8.238.49-1593", "type": "trojan", "server": "46.8.238.49", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.57.108.242-1605", "type": "trojan", "server": "31.57.108.242", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇮FI-77.110.98.16-1601", "type": "trojan", "server": "77.110.98.16", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-195.58.38.221-1589", "type": "trojan", "server": "195.58.38.221", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇩🇪DE-152.53.153.158-1598", "type": "trojan", "server": "152.53.153.158", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇸🇪SE-62.60.151.252-1600", "type": "trojan", "server": "62.60.151.252", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-217.60.63.211-1604", "type": "trojan", "server": "217.60.63.211", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.56.176.37-1606", "type": "trojan", "server": "31.56.176.37", "port": 2053, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+  - {"name": "🇫🇷FR-31.59.103.95-1607", "type": "trojan", "server": "31.59.103.95", "port": 8443, "password": "8r%3C%5B9%27l6hAO%238ZQi", "udp": true, "sni": "Koma-YT.PAGeS.Dev", "network": "ws", "ws-opts": {"path": "/trTelegram🇨🇳 @WangCai2"}}
+
 proxy-groups:
-- name: PROXY
-  type: select
-  proxies:
-  - AUTO
-  - sp-local
-  - DIRECT
-- name: AUTO
-  type: url-test
-  proxies:
-  - CN-144.79.11.154-1
-  - TW-211.76.176.98-0
-  - CN-144.79.11.154-1-1
-  - RELAY-190.93.244.1
-  - CN-122.51.67.96-00
-  - CN-122.51.67.96-00-1
-  - CN-144.79.11.154-0
-  - RELAY-172.64.93.13
-  - US-172.236.100.134
-  - US-172.239.34.52-0
-  - US-76.223.54.146-0
-  - RELAY-172.66.47.44
-  - US-172.239.193.198
-  - RELAY-104.16.162.1
-  - RELAY-172.64.147.7
-  url: http://cp.cloudflare.com/generate_204
-  interval: 120
-  tolerance: 150
-- name: sp-local
-  type: select
-  proxies:
-  - sp-local-socks
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "♻️ 自动选择"
+      - "🔰 故障转移"
+      - DIRECT
+      - "🇭🇰 香港"
+      - "🇺🇸 美国"
+      - "🇰🇷 韩国"
+      - "🇹🇼 台湾"
+      - "🇩🇪 德国"
+      - "🇬🇧 英国"
+      - "🇫🇷 法国"
+      - "🇦🇺 澳洲"
+  - name: "♻️ 自动选择"
+    type: url-test
+    proxies:
+      - "🏁RELAY-172.66.44.211-0697"
+      - "🇹🇼TW-211.76.176.98-0425"
+      - "🏁RELAY-172.64.147.24-0671"
+      - "🇮🇳IN-152.67.160.174-0454"
+      - "美国+CloudFlare节点"
+      - "🇰🇷KR-121.180.171.43-0689"
+      - "🇰🇷KR-121.178.83.161-0688"
+      - "🇰🇷KR-59.21.203.65-0687"
+      - "🏁RELAY-104.21.40.34-0691"
+      - "🏁RELAY-8.6.112.0-0672"
+      - "🏁RELAY-104.18.0.55-0696"
+      - "捷克+V2CROSS.COM"
+      - "俄罗斯+V2CROSS.COM"
+      - "美国+CloudFlare节点"
+      - "🇺🇸US-216.24.57.250-0711"
+      - "俄罗斯+V2CROSS.COM"
+      - "乌克兰+V2CROSS.COM"
+      - "🇨🇦CA-148.113.141.99-0496"
+      - "英国+V2CROSS.COM"
+      - "🇦🇺AU-103.224.212.216-0907"
+      - "🇦🇺AU-103.224.212.216-0823"
+      - "🏁RELAY-172.65.211.209-1011"
+      - "🏁RELAY-172.65.211.209-1022"
+      - "🏁RELAY-172.65.211.209-1009"
+      - "🏁RELAY-172.65.211.209-1047"
+      - "🇫🇷FR-51.38.99.96-1052"
+      - "🏁RELAY-172.65.211.209-1057"
+      - "🏁RELAY-172.65.211.209-1096"
+      - "🏁RELAY-172.65.211.209-1059"
+      - "🏁RELAY-172.65.211.209-1060"
+      - "🏁RELAY-172.65.211.209-1108"
+      - "🇺🇸US-76.223.54.146-1245"
+      - "🇺🇸US-76.223.54.146-1248"
+      - "🏁RELAY-172.65.211.209-1117"
+      - "🇺🇸US-76.223.54.146-1255"
+      - "🏁RELAY-104.21.88.44-1256"
+      - "🇺🇸US-76.223.54.146-1274"
+      - "🇺🇸US-76.223.54.146-1273"
+      - "🇺🇸US-76.223.54.146-1348"
+      - "🇺🇸US-76.223.54.146-1417"
+      - "🇭🇰HK-103.177.136.41-1510"
+      - "🇭🇰HK-103.177.136.41-1509"
+      - "🇺🇸US-155.117.198.83-1511"
+      - "🇭🇰HK-103.177.136.41-1512"
+      - "🇺🇸US-155.117.198.86-1513"
+      - "🇭🇰HK-103.177.136.41-1514"
+      - "🇲🇾MY-85.211.246.136-1515"
+      - "🏁RELAY-104.18.32.47-1530"
+      - "🏁RELAY-104.26.6.205-1531"
+      - "🇰🇷KR-218.152.227.25-1536"
+      - "🇺🇸US-216.24.57.251-1532"
+      - "🏁RELAY-104.18.20.213-1540"
+      - "🏁RELAY-14.102.228.76-1541"
+      - "🇬🇧GB-43.245.227.108-1545"
+      - "🇫🇮FI-194.164.235.62-1544"
+      - "🇫🇮FI-87.251.16.237-1549"
+      - "🇵🇱PL-31.133.0.55-1548"
+      - "🇫🇮FI-141.105.143.132-1550"
+      - "🇵🇱PL-31.133.0.159-1551"
+      - "🇵🇱PL-45.144.51.133-1552"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 100
+  - name: "🔰 故障转移"
+    type: fallback
+    proxies:
+      - "🏁RELAY-172.66.44.211-0697"
+      - "🇹🇼TW-211.76.176.98-0425"
+      - "🏁RELAY-172.64.147.24-0671"
+      - "🇮🇳IN-152.67.160.174-0454"
+      - "美国+CloudFlare节点"
+      - "🇰🇷KR-121.180.171.43-0689"
+      - "🇰🇷KR-121.178.83.161-0688"
+      - "🇰🇷KR-59.21.203.65-0687"
+      - "🏁RELAY-104.21.40.34-0691"
+      - "🏁RELAY-8.6.112.0-0672"
+      - "🏁RELAY-104.18.0.55-0696"
+      - "捷克+V2CROSS.COM"
+      - "俄罗斯+V2CROSS.COM"
+      - "美国+CloudFlare节点"
+      - "🇺🇸US-216.24.57.250-0711"
+      - "俄罗斯+V2CROSS.COM"
+      - "乌克兰+V2CROSS.COM"
+      - "🇨🇦CA-148.113.141.99-0496"
+      - "英国+V2CROSS.COM"
+      - "🇦🇺AU-103.224.212.216-0907"
+      - "🇦🇺AU-103.224.212.216-0823"
+      - "🏁RELAY-172.65.211.209-1011"
+      - "🏁RELAY-172.65.211.209-1022"
+      - "🏁RELAY-172.65.211.209-1009"
+      - "🏁RELAY-172.65.211.209-1047"
+      - "🇫🇷FR-51.38.99.96-1052"
+      - "🏁RELAY-172.65.211.209-1057"
+      - "🏁RELAY-172.65.211.209-1096"
+      - "🏁RELAY-172.65.211.209-1059"
+      - "🏁RELAY-172.65.211.209-1060"
+      - "🏁RELAY-172.65.211.209-1108"
+      - "🇺🇸US-76.223.54.146-1245"
+      - "🇺🇸US-76.223.54.146-1248"
+      - "🏁RELAY-172.65.211.209-1117"
+      - "🇺🇸US-76.223.54.146-1255"
+      - "🏁RELAY-104.21.88.44-1256"
+      - "🇺🇸US-76.223.54.146-1274"
+      - "🇺🇸US-76.223.54.146-1273"
+      - "🇺🇸US-76.223.54.146-1348"
+      - "🇺🇸US-76.223.54.146-1417"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇭🇰 香港"
+    type: url-test
+    proxies:
+      - "🇭🇰HK-103.177.136.41-1510"
+      - "🇭🇰HK-103.177.136.41-1509"
+      - "🇭🇰HK-103.177.136.41-1512"
+      - "🇭🇰HK-103.177.136.41-1514"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇺🇸 美国"
+    type: url-test
+    proxies:
+      - "美国+CloudFlare节点"
+      - "美国+CloudFlare节点"
+      - "🇺🇸US-216.24.57.250-0711"
+      - "🇺🇸US-76.223.54.146-1245"
+      - "🇺🇸US-76.223.54.146-1248"
+      - "🇺🇸US-76.223.54.146-1255"
+      - "🇺🇸US-76.223.54.146-1274"
+      - "🇺🇸US-76.223.54.146-1273"
+      - "🇺🇸US-76.223.54.146-1348"
+      - "🇺🇸US-76.223.54.146-1417"
+      - "🇺🇸US-155.117.198.83-1511"
+      - "🇺🇸US-155.117.198.86-1513"
+      - "🇺🇸US-216.24.57.251-1532"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇰🇷 韩国"
+    type: url-test
+    proxies:
+      - "🇰🇷KR-121.180.171.43-0689"
+      - "🇰🇷KR-121.178.83.161-0688"
+      - "🇰🇷KR-59.21.203.65-0687"
+      - "🇰🇷KR-218.152.227.25-1536"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇹🇼 台湾"
+    type: url-test
+    proxies:
+      - "🇹🇼TW-211.76.176.98-0425"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇩🇪 德国"
+    type: url-test
+    proxies:
+      - "🇩🇪DE-93.115.19.15-1556"
+      - "🇩🇪DE-138.124.50.47-1566"
+      - "🇩🇪DE-104.194.156.228-1579"
+      - "🇩🇪DE-77.239.98.191-1571"
+      - "🇩🇪DE-77.239.98.141-1570"
+      - "🇩🇪DE-195.58.38.221-1589"
+      - "🇩🇪DE-152.53.153.158-1598"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇬🇧 英国"
+    type: url-test
+    proxies:
+      - "英国+V2CROSS.COM"
+      - "🇬🇧GB-43.245.227.108-1545"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇫🇷 法国"
+    type: url-test
+    proxies:
+      - "🇫🇷FR-51.38.99.96-1052"
+      - "🇫🇷FR-77.110.106.91-1554"
+      - "🇫🇷FR-92.119.127.156-1555"
+      - "🇫🇷FR-31.56.146.122-1558"
+      - "🇫🇷FR-31.58.76.50-1557"
+      - "🇫🇷FR-95.182.98.140-1560"
+      - "🇫🇷FR-94.183.186.206-1561"
+      - "🇫🇷FR-77.110.106.55-1569"
+      - "🇫🇷FR-31.56.228.7-1559"
+      - "🇫🇷FR-46.226.167.115-1568"
+      - "🇫🇷FR-62.60.157.104-1585"
+      - "🇫🇷FR-31.57.108.242-1605"
+      - "🇫🇷FR-217.60.63.211-1604"
+      - "🇫🇷FR-31.56.176.37-1606"
+      - "🇫🇷FR-31.59.103.95-1607"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🇦🇺 澳洲"
+    type: url-test
+    proxies:
+      - "🇦🇺AU-103.224.212.216-0907"
+      - "🇦🇺AU-103.224.212.216-0823"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🔗 VLESS"
+    type: url-test
+    proxies:
+      - "捷克+V2CROSS.COM"
+      - "俄罗斯+V2CROSS.COM"
+      - "美国+CloudFlare节点"
+      - "俄罗斯+V2CROSS.COM"
+      - "乌克兰+V2CROSS.COM"
+      - "英国+V2CROSS.COM"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: "🔗 TROJAN"
+    type: url-test
+    proxies:
+      - "🏁RELAY-172.66.44.211-0697"
+      - "🇹🇼TW-211.76.176.98-0425"
+      - "🏁RELAY-172.64.147.24-0671"
+      - "🇮🇳IN-152.67.160.174-0454"
+      - "美国+CloudFlare节点"
+      - "🇰🇷KR-121.180.171.43-0689"
+      - "🇰🇷KR-121.178.83.161-0688"
+      - "🇰🇷KR-59.21.203.65-0687"
+      - "🏁RELAY-104.21.40.34-0691"
+      - "🏁RELAY-8.6.112.0-0672"
+      - "🏁RELAY-104.18.0.55-0696"
+      - "🇺🇸US-216.24.57.250-0711"
+      - "🇨🇦CA-148.113.141.99-0496"
+      - "🇦🇺AU-103.224.212.216-0907"
+      - "🇦🇺AU-103.224.212.216-0823"
+      - "🏁RELAY-172.65.211.209-1011"
+      - "🏁RELAY-172.65.211.209-1022"
+      - "🏁RELAY-172.65.211.209-1009"
+      - "🏁RELAY-172.65.211.209-1047"
+      - "🇫🇷FR-51.38.99.96-1052"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
 rules:
-- DOMAIN-SUFFIX,cn,DIRECT
-- DOMAIN-KEYWORD,baidu,DIRECT
-- DOMAIN-KEYWORD,alipay,DIRECT
-- DOMAIN-KEYWORD,taobao,DIRECT
-- DOMAIN-KEYWORD,bilibili,DIRECT
-- DOMAIN-KEYWORD,qq.com,DIRECT
-- DOMAIN-KEYWORD,douyin,DIRECT
-- DOMAIN-KEYWORD,jd.com,DIRECT
-- DOMAIN-KEYWORD,zhihu,DIRECT
-- DOMAIN-KEYWORD,163.com,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- MATCH,PROXY
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,alibaba.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,google.com,🚀 节点选择
+  - DOMAIN-SUFFIX,google.co.jp,🚀 节点选择
+  - DOMAIN-SUFFIX,googlevideo.com,🚀 节点选择
+  - DOMAIN-SUFFIX,gstatic.com,🚀 节点选择
+  - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
+  - DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
+  - DOMAIN-SUFFIX,youtu.be,🚀 节点选择
+  - DOMAIN-SUFFIX,github.com,🚀 节点选择
+  - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
+  - DOMAIN-SUFFIX,githubassets.com,🚀 节点选择
+  - DOMAIN-SUFFIX,twitter.com,🚀 节点选择
+  - DOMAIN-SUFFIX,x.com,🚀 节点选择
+  - DOMAIN-SUFFIX,twimg.com,🚀 节点选择
+  - DOMAIN-SUFFIX,facebook.com,🚀 节点选择
+  - DOMAIN-SUFFIX,instagram.com,🚀 节点选择
+  - DOMAIN-SUFFIX,whatsapp.com,🚀 节点选择
+  - DOMAIN-SUFFIX,meta.com,🚀 节点选择
+  - DOMAIN-SUFFIX,telegram.org,🚀 节点选择
+  - DOMAIN-SUFFIX,t.me,🚀 节点选择
+  - DOMAIN-SUFFIX,wikipedia.org,🚀 节点选择
+  - DOMAIN-SUFFIX,wikimedia.org,🚀 节点选择
+  - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
+  - DOMAIN-SUFFIX,redd.it,🚀 节点选择
+  - DOMAIN-SUFFIX,discord.com,🚀 节点选择
+  - DOMAIN-SUFFIX,discord.gg,🚀 节点选择
+  - DOMAIN-SUFFIX,discordapp.com,🚀 节点选择
+  - DOMAIN-SUFFIX,netflix.com,🚀 节点选择
+  - DOMAIN-SUFFIX,nflxvideo.net,🚀 节点选择
+  - DOMAIN-SUFFIX,openai.com,🚀 节点选择
+  - DOMAIN-SUFFIX,chatgpt.com,🚀 节点选择
+  - DOMAIN-SUFFIX,claude.ai,🚀 节点选择
+  - DOMAIN-SUFFIX,anthropic.com,🚀 节点选择
+  - DOMAIN-SUFFIX,amazon.com,🚀 节点选择
+  - DOMAIN-SUFFIX,amazonaws.com,🚀 节点选择
+  - DOMAIN-SUFFIX,microsoft.com,🚀 节点选择
+  - DOMAIN-SUFFIX,azure.com,🚀 节点选择
+  - DOMAIN-SUFFIX,apple.com,🚀 节点选择
+  - DOMAIN-SUFFIX,icloud.com,🚀 节点选择
+  - DOMAIN-SUFFIX,spotify.com,🚀 节点选择
+  - DOMAIN-SUFFIX,tiktok.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cloudflare.com,🚀 节点选择
+  - DOMAIN-SUFFIX,medium.com,🚀 节点选择
+  - DOMAIN-SUFFIX,stackoverflow.com,🚀 节点选择
+  - DOMAIN-SUFFIX,npmjs.com,🚀 节点选择
+  - DOMAIN-SUFFIX,docker.com,🚀 节点选择
+  - DOMAIN-SUFFIX,docker.io,🚀 节点选择
+  - DOMAIN-SUFFIX,v2ex.com,🚀 节点选择
+  - MATCH,🚀 节点选择
